@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Formation de Professeur de Yoga | Centre Santosha</title>
+    <meta name="description"
+        content="Formulaire d'inscription à la Formation de Professeur de Yoga au Centre Santosha (Bruxelles et Jodoigne).">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-section {
+            background: var(--cream);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 2.5rem;
+        }
+
+        .form-section h3 {
+            color: var(--terracotta);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--sand);
+            padding-bottom: 0.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 5px;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--terracotta);
+        }
+
+        .checkbox-group label {
+            line-height: 1.5;
+            flex: 1;
+            font-weight: 400;
+        }
+
+        .conditions-box {
+            background: var(--white);
+            border: 1px solid var(--sand);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--mid);
+        }
+
+        #inscription-success {
+            display: none;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid #a5d6a7;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="page-hero"
+            style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-formation.jpg'); background-size: cover; background-position: center;">
+            <div class="container">
+                <span class="hero-tag" style="color: white; opacity: 0.9;">Rejoignez-nous</span>
+                <h1 style="color: white;">Inscription</h1>
+                <div class="divider divider-center" style="background: white;"></div>
+                <p style="color: white; opacity: 0.8;">Formation de Professeur de Yoga</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="container" style="max-width: 800px;">
+
+                <div class="conditions-box">
+                    <p style="margin-bottom: 1rem;"><strong>Vos informations sont et resteront confidentielles au sein
+                            du corps professoral du Centre de YOGA Santosha.</strong></p>
+                    <p style="margin-bottom: 0.5rem; font-weight: bold; color: var(--dark);">Fréquentation des cours.
+                        Minerval.</p>
+                    <p style="margin-bottom: 1rem;">Vous avez vu dans le programme que l’enseignement se terminera par
+                        des examens (que nous répartirons par année) et un travail de fin d’étude.</p>
+                    <p style="margin-bottom: 1rem;">Pour avoir accès à l’examen final et au diplôme, vous devrez avoir
+                        suivi 80% des cours.</p>
+                    <p style="margin-bottom: 1rem;">J’espère que vous irez, comme bien d’autres, jusqu’au bout de la
+                        formation.</p>
+                    <p>Si vous décidez d’arrêter en cours de route pour quelque raison que ce soit, le minerval de
+                        l’année en cours sera dû, mais non les minervaux des années suivantes s’il en reste.</p>
+                </div>
+
+                <div id="inscription-success">
+                    <h3 style="margin-bottom: 1rem; color: #2e7d32;">Candidature envoyée !</h3>
+                    <p>Merci pour votre inscription. Nous avons bien reçu vos informations de candidature pour la
+                        formation de professeur de yoga.<br>Nous vous contacterons très prochainement.</p>
+                    <div style="margin-top: 2rem;">
+                        <a href="formation-professeurs.html" class="btn btn-outline">Retour à la formation</a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="inscription-form" name="inscription-formation" data-netlify="true"
+                    data-netlify-honeypot="bot-field" onsubmit="handleInscriptionSubmit(event)">
+                    <p class="hidden" style="display:none;">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+
+                    <!-- Informations personnelles -->
+                    <div class="form-section">
+                        <h3>Informations Personnelles</h3>
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nom">Nom de Famille *</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adresse">Rue et numéro *</label>
+                            <input type="text" id="adresse" name="adresse" required>
+                        </div>
+
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="code_postal">Code Postal *</label>
+                                <input type="text" id="code_postal" name="code_postal" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ville">Ville *</label>
+                                <input type="text" id="ville" name="ville" required>
+                            </div>
+                        </div>
+
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Adresse email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="date_naissance">Date de Naissance *</label>
+                                <input type="date" id="date_naissance" name="date_naissance" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="etat_civil">État civil *</label>
+                                <input type="text" id="etat_civil" name="etat_civil" required>
+                            </div>
+                        </div>
+
+                        <div class="two-col">
+                            <div class="form-group">
+                                <label for="etudes">Études *</label>
+                                <input type="text" id="etudes" name="etudes" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profession">Profession *</label>
+                                <input type="text" id="profession" name="profession" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact_urgence">Nom d'une personne de contact en cas d'urgence et N° de tél.
+                                *</label>
+                            <input type="text" id="contact_urgence" name="contact_urgence" required>
+                        </div>
+                    </div>
+
+                    <!-- Parcours Yoga -->
+                    <div class="form-section">
+                        <h3>Parcours Yoga & Motivation</h3>
+
+                        <div class="form-group">
+                            <label for="pratique_depuis">Depuis quand pratiquez-vous le yoga ? *</label>
+                            <input type="text" id="pratique_depuis" name="pratique_depuis" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="style_yoga">Quel genre ou quel style de yoga ? *</label>
+                            <input type="text" id="style_yoga" name="style_yoga" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deja_enseigne">Avez-vous déjà enseigné le yoga et combien de temps ? *</label>
+                            <textarea id="deja_enseigne" name="deja_enseigne" style="min-height: 80px;"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience_meditation">Avez-vous une expérience de la méditation ? Si oui, sous
+                                quelle forme ? *</label>
+                            <textarea id="experience_meditation" name="experience_meditation" style="min-height: 80px;"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="attrait_yoga">Qu’est-ce qui vous attire dans la voie du yoga ? *</label>
+                            <textarea id="attrait_yoga" name="attrait_yoga" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="definition_yoga">Quelle définition donnez-vous au yoga et quel est selon vous le
+                                rôle de l’enseignant de yoga ? *</label>
+                            <textarea id="definition_yoga" name="definition_yoga" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pousse_formation">Qu’est-ce qui vous a poussé à entreprendre une formation
+                                d’enseignant de yoga ? *</label>
+                            <textarea id="pousse_formation" name="pousse_formation" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Santé -->
+                    <div class="form-section">
+                        <h3>Votre Santé</h3>
+
+                        <div class="form-group">
+                            <label for="traitement_medical">Suivez-vous un traitement médical pour une affection
+                                physique ou psychique ? Si oui, lequel ? *</label>
+                            <textarea id="traitement_medical" name="traitement_medical" style="min-height: 80px;"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="limitations_physiques">Avez-vous des limitations physiques et de quel ordre ?
+                                *</label>
+                            <textarea id="limitations_physiques" name="limitations_physiques" style="min-height: 80px;"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="troubles_psy">Avez-vous des troubles psychologiques ? *</label>
+                            <textarea id="troubles_psy" name="troubles_psy" style="min-height: 80px;"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="maladie_contagieuse">Êtes-vous porteur d'une maladie contagieuse ? *</label>
+                            <input type="text" id="maladie_contagieuse" name="maladie_contagieuse" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="maladie_grave">Avez-vous eu une grave maladie ou opération dans les 5 années
+                                précédentes ? *</label>
+                            <textarea id="maladie_grave" name="maladie_grave" style="min-height: 80px;"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Engagements -->
+                    <div class="form-section" style="background: none; padding: 0;">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="certifie_exact" name="certifie_exact" required>
+                            <label for="certifie_exact">Je certifie que les informations ci-dessus sont exactes et que
+                                je les ai renseignées en toute conscience. *</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="accord_conditions" name="accord_conditions" required>
+                            <label for="accord_conditions">Je marque mon accord avec les conditions exposées ci-dessus
+                                et dans le programme des cours que j’ai lu attentivement. *</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; border: none; cursor: pointer; padding: 1.2rem; font-size: 1.1rem; margin-top: 1rem;">Envoyer
+                        ma candidature</button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </div><!-- .page-wrapper -->
+
+    <script src="js/components.js"></script>
+    <script>
+        function handleInscriptionSubmit(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            // Le bouton passe en mode chargement
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Envoi en cours...';
+            submitBtn.disabled = true;
+
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+                .then(() => {
+                    document.getElementById('inscription-form').style.display = 'none';
+                    document.getElementById('inscription-success').style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                })
+                .catch((error) => {
+                    alert("Une erreur s'est produite lors de l'envoi. Veuillez réessayer.");
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        }
+    </script>
+</body>
+
+</html>
