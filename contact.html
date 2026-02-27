@@ -66,7 +66,11 @@
                     <!-- Formulaire -->
                     <div>
                         <h2 style="margin-bottom:1.5rem;">Envoyez-nous un message</h2>
-                        <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+                        <form class="contact-form" id="contact-form" name="contact" data-netlify="true"
+                            data-netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+                            <p class="hidden" style="display:none;">
+                                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
                             <div class="form-group">
                                 <label for="name">Votre nom</label>
                                 <input type="text" id="name" name="name" placeholder="Prénom Nom" required>
@@ -158,9 +162,22 @@
     <script>
         function handleSubmit(e) {
             e.preventDefault();
-            // Simulation envoi — remplacer par logique réelle
-            document.getElementById('contact-form').style.display = 'none';
-            document.getElementById('form-success').style.display = 'block';
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+                .then(() => {
+                    document.getElementById('contact-form').style.display = 'none';
+                    document.getElementById('form-success').style.display = 'block';
+                })
+                .catch((error) => {
+                    alert("Une erreur s'est produite lors de l'envoi. Veuillez réessayer.");
+                });
         }
     </script>
 </body>
