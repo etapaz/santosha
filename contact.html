@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Centre de Yoga Santosha</title>
+    <meta name="description"
+        content="Contactez le Centre de Yoga Santosha à Bruxelles et Jodoigne. Formulaire de contact et coordonnées.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="page-hero"
+            style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-yoga.jpg'); background-size: cover; background-position: center;">
+            <div class="container">
+                <span class="hero-tag" style="color: white; opacity: 0.9;">☽ Échangeons</span>
+                <h1 style="color: white;">Contact</h1>
+                <div class="divider divider-center" style="background: white;"></div>
+                <p style="color: white; opacity: 0.8;">Comment pouvons-nous vous aider ?</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="contact-grid">
+
+                    <!-- Infos -->
+                    <div>
+                        <p style="margin-bottom:2.5rem; color:var(--mid);">Vous souhaitez recevoir de plus amples
+                            informations sur les cours, les formations, les événements ou sur tout autre sujet relatif
+                            aux activités des centres ? Contactez-nous via le formulaire ou directement par téléphone.
+                            Nous vous répondrons dans les plus brefs délais.</p>
+
+                        <div style="margin-bottom:2.5rem;">
+                            <h3>Santosha Jodoigne</h3>
+                            <div class="divider" style="margin-bottom:1.2rem;"></div>
+                            <address style="font-style:normal; font-size:0.92rem; line-height:2; color:var(--mid);">
+                                <strong>Brabant Wallon</strong><br>
+                                39 chaussée de Wavre<br>
+                                1370 Jodoigne — Belgique<br>
+                                Tél. : <a href="tel:+32470391432">0470 391 432</a> ou <a href="tel:+32495366172">0495
+                                    366 172</a><br>
+                                Email : <a href="mailto:yoga@santosha.be">yoga@santosha.be</a><br>
+                                IBAN : BE14 7320 1974 2783 — BIC : CREGBEBB
+                            </address>
+                        </div>
+
+                        <div>
+                            <h3>Santosha Bruxelles</h3>
+                            <div class="divider" style="margin-bottom:1.2rem;"></div>
+                            <address style="font-style:normal; font-size:0.92rem; line-height:2; color:var(--mid);">
+                                <strong>Schaerbeek</strong><br>
+                                151 avenue Ernest Cambier<br>
+                                1030 Schaerbeek (Rond-Point Meiser) — Belgique<br>
+                                Tél. : <a href="tel:+32495366172">0495 366 172</a><br>
+                                Email : <a href="mailto:yoga@santosha.be">yoga@santosha.be</a><br>
+                                IBAN : BE42 7320 3474 5754 — BIC : CREGBEBB
+                            </address>
+                        </div>
+                    </div>
+
+                    <!-- Formulaire -->
+                    <div>
+                        <h2 style="margin-bottom:1.5rem;">Envoyez-nous un message</h2>
+                        <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Votre nom</label>
+                                <input type="text" id="name" name="name" placeholder="Prénom Nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Votre email</label>
+                                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="centre">Centre concerné</label>
+                                <select id="centre" name="centre">
+                                    <option value="">— Sélectionner —</option>
+                                    <option value="jodoigne">Santosha Jodoigne</option>
+                                    <option value="bruxelles">Santosha Bruxelles</option>
+                                    <option value="les-deux">Les deux centres</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" id="subject" name="subject"
+                                    placeholder="Informations sur les cours..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Votre message..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="width:100%; border:none; cursor:pointer;">Envoyer le message</button>
+                        </form>
+
+                        <div id="form-success"
+                            style="display:none; background:var(--sage); color:white; padding:1.5rem; border-radius:4px; margin-top:1rem; text-align:center;">
+                            <p style="color:white; margin:0;">✓ Merci ! Votre message a bien été envoyé. Nous vous
+                                répondrons rapidement.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Maps placeholders -->
+        <section style="background:var(--sand); padding:3rem 0;">
+            <div class="container">
+                <div class="two-col">
+                    <div>
+                        <h3 style="margin-bottom:1rem;">Nous trouver à Jodoigne</h3>
+                        <div
+                            style="width:100%; height:250px; background:var(--white); border:1px solid var(--sand); border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative;">
+                            <img src="img/salle-jodoigne.jpg" alt="Centre Jodoigne"
+                                style="width:100%; height:100%; object-fit:cover; opacity:0.6;">
+                            <a href="https://www.google.com/maps?q=39+chaussée+de+Wavre,+1370+Jodoigne,+Belgique"
+                                target="_blank" rel="noopener" class="btn btn-outline" style="position:absolute;">Voir
+                                sur Google Maps →</a>
+                        </div>
+                        <p style="font-size:0.82rem; color:var(--light-text); margin-top:0.8rem;">39 Chaussée de Wavre,
+                            1370 Jodoigne</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom:1rem;">Nous trouver à Bruxelles</h3>
+                        <div
+                            style="width:100%; height:250px; background:var(--white); border:1px solid var(--sand); border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative;">
+                            <img src="img/salle-bruxelles.jpg" alt="Centre Bruxelles"
+                                style="width:100%; height:100%; object-fit:cover; opacity:0.6;">
+                            <a href="https://www.google.com/maps?q=151+Avenue+Ernest+Cambier,+1030+Schaerbeek,+Belgique"
+                                target="_blank" rel="noopener" class="btn btn-outline" style="position:absolute;">Voir
+                                sur Google Maps →</a>
+                        </div>
+                        <p style="font-size:0.82rem; color:var(--light-text); margin-top:0.8rem;">151 Avenue Ernest
+                            Cambier, 1030 Schaerbeek</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="newsletter-banner">
+            <div class="container">
+                <h2>Ne manquez aucun événement</h2>
+                <p>Inscrivez-vous à notre newsletter pour rester informés.</p>
+                <a href="https://view.flodesk.com/pages/6121f5ab76ee12de011f89ee" target="_blank" rel="noopener"
+                    class="btn btn-outline-light">S'inscrire</a>
+            </div>
+        </div>
+
+    </div><!-- .page-wrapper -->
+
+    <script src="js/components.js"></script>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            // Simulation envoi — remplacer par logique réelle
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
