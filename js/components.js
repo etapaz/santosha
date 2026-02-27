@@ -184,6 +184,22 @@ function initPageTransition() {
       window.location.href = href;
     }, 350);
   });
+
+  // Handle browser back button (BFCache)
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) {
+      wrapper.style.opacity = '1';
+      wrapper.style.transform = 'translateY(0)';
+      wrapper.style.transition = 'none'; // Avoid animating back in
+
+      // small delay to restore the transition property for future clicks
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          wrapper.style.transition = '';
+        });
+      });
+    }
+  });
 }
 
 function initBackToTop() {
