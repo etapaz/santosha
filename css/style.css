@@ -179,7 +179,9 @@ header.scrolled {
 
 @media (max-width: 600px) {
     .logo-img {
-        display: none;
+        height: 35px;
+        /* On réduit un peu la taille pour mobile */
+        margin-right: 10px;
     }
 }
 
