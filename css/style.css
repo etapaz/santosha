@@ -888,6 +888,11 @@ footer {
     margin-bottom: 2rem;
 }
 
+/* Centrage du formulaire Kit */
+.newsletter-banner .formkit-form {
+    margin: 0 auto !important;
+}
+
 /* ---- Formation ---- */
 .formation-card {
     border: 1px solid var(--sand);
