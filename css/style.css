@@ -1090,3 +1090,122 @@ a.card h3 {
         align-items: center;
     }
 }
+
+/* ---- ALERT BANNER ---- */
+.alert-banner {
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    font-family: var(--font-serif);
+    margin-bottom: 0;
+    box-shadow: 0 4px 15px rgba(181, 113, 76, 0.15);
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 600px) {
+    .alert-banner {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+}
+
+/* ---- PROMO BANNER (Global) ---- */
+.promo-banner {
+    background: var(--white);
+    border-bottom: 1px solid var(--sand);
+    padding: 0.6rem 1rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.promo-banner-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.promo-banner-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--sand);
+    flex-shrink: 0;
+}
+
+.promo-banner span {
+    font-size: 0.88rem;
+    color: var(--mid);
+    line-height: 1.4;
+}
+
+.promo-banner strong {
+    color: var(--terracotta);
+}
+
+.promo-banner a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--terracotta);
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+}
+
+.promo-banner a:hover {
+    color: var(--terracotta);
+}
+
+.close-banner {
+    background: none;
+    border: none;
+    color: var(--light-text);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    transition: color 0.3s ease;
+}
+
+.close-banner:hover {
+    color: var(--terracotta);
+}
+
+@media (max-width: 900px) {
+    .promo-banner-inner {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .promo-banner-inner {
+        flex-direction: row;
+        text-align: left;
+        gap: 0.8rem;
+        padding-right: 1.5rem;
+    }
+    
+    .promo-banner-img {
+        display: none;
+    }
+    
+    .promo-banner span {
+        font-size: 0.8rem;
+    }
+
+    .close-banner {
+        position: absolute;
+        right: 0.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

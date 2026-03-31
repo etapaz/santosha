@@ -56,6 +56,12 @@ function injectHeader() {
   `).join('');
 
   const headerHTML = `
+    <div id="promo-banner" class="promo-banner">
+      <div class="promo-banner-inner">
+        <img src="${prefix}img/retraite-italie-villa.avif" alt="Yoga en Italie" class="promo-banner-img">
+        <span>Prochaine retraite : <strong>Yoga en Ombrie (Italie)</strong> — Du 19 au 25 septembre 2026. <a href="${prefix}retraites.html">Découvrir le programme →</a></span>
+      </div>
+    </div>
     <header id="site-header">
       <div class="header-inner">
         <a href="${prefix}index.html" class="logo">
