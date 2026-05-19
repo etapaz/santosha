@@ -1,0 +1,154 @@
+=========================================
+DANYA HERSHKOWITZ - ARCHIVE / BACKUP INFO
+=========================================
+
+--- DETAILS DU PROFESSEUR ---
+Nom : Danya Hershkowitz
+Email : hershkowitz.danya@gmail.com
+Téléphone : +32 495 70 89 54
+Lien de réservation (Zenamu) : https://app.zenamu.com/yogidany
+Photo d'origine : img/danya-hershkowitz.jpg (Sauvegardée dans archives/danya-hershkowitz.jpg)
+
+--- BIO ---
+Danya propose des cours de Hatha Yoga à Bruxelles avec une politique de prix solidaire : deux tarifs au choix selon vos moyens, qui peuvent varier d'une semaine à l'autre.
+
+--- ANCIEN COURS ---
+Jeudi 12h30 – 13h30 : Hatha Yoga (Bruxelles)
+
+--- ANCIEN TARIF ---
+Hatha Yoga — Danya Hershkowitz
+- Prix doux : 12 €
+- Prix de soutien : 15 €
+- Inscription : app.zenamu.com/yogidany
+
+
+=========================================
+CODES HTML D'ORIGINE POUR RESTAURER
+=========================================
+
+1. PAGE DE PROFIL : profs/danya-hershkowitz.html
+------------------------------------------------
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danya Hershkowitz | Centre de Yoga Santosha</title>
+    <meta name="description" content="Danya Hershkowitz, professeure de Hatha Yoga à Bruxelles — Santosha.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/santosha-logo.png">
+
+<body>
+    <div class="page-wrapper">
+        <div class="page-hero">
+            <div class="container">
+                <span class="hero-tag">☽ Professeure</span>
+                <h1>Danya Hershkowitz</h1>
+                <div class="divider divider-center"></div>
+                <p style="color:var(--light-text);">Hatha Yoga · Bruxelles</p>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="two-col">
+                    <div>
+                        <div class="teacher-avatar large"><img src="../img/danya-hershkowitz.jpg" alt="Danya Hershkowitz"></div>
+                        <h2>Danya Hershkowitz</h2>
+                        <div class="divider"></div>
+                        <p>Danya propose des cours de Hatha Yoga à Bruxelles avec une politique de prix solidaire : deux
+                            tarifs au choix selon vos moyens, qui peuvent varier d'une semaine à l'autre.</p>
+                        <p><strong>Contact :</strong><br>
+                            <a href="mailto:hershkowitz.danya@gmail.com">hershkowitz.danya@gmail.com</a><br>
+                            Tél. : <a href="tel:+32495708954">+32 495 70 89 54</a>
+                        </p>
+                        <p style="margin-top:1rem;"><a href="https://app.zenamu.com/yogidany" target="_blank"
+                                rel="noopener" class="btn btn-primary">Réserver sur Zenamu →</a></p>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <h4>Cours à Bruxelles</h4>
+                            <div style="margin-top:1rem;">
+                                <div class="schedule-row"><span class="schedule-time">Jeu 12h30–13h30 ✦</span><span
+                                        class="schedule-type">Hatha Yoga</span></div>
+                            </div>
+                            <p style="font-size:0.78rem; color:var(--light-text); margin-top:0.5rem;">✦ Nouveau cours
+                            </p>
+                        </div>
+                        <div class="card" style="margin-top:1.2rem;">
+                            <h4>Tarifs solidaires</h4>
+                            <div class="tarif-row"><span class="tarif-label">Prix doux</span><span
+                                    class="tarif-price">12 €</span></div>
+                            <div class="tarif-row"><span class="tarif-label">Prix de soutien</span><span
+                                    class="tarif-price">15 €</span></div>
+                            <p style="font-size:0.82rem; color:var(--light-text); margin-top:0.8rem;">Selon vos moyens
+                                du jour — les deux tarifs peuvent alterner selon les semaines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../js/components.js"></script>
+</body>
+
+</html>
+
+
+2. CARD SUR index.html (Nouveautés)
+-----------------------------------
+          <div class="card">
+            <h4>Nouveau · Jeudi</h4>
+            <h3>Hatha Yoga</h3>
+            <p>Avec <strong>Danya</strong> — Jeudi de 12h30 à 13h30 à Bruxelles</p>
+          </div>
+
+
+3. LIGNE DANS LA GRILLE HORAIRE DU JEUDI (horaires.html)
+-------------------------------------------------------
+                        <div class="schedule-row">
+                            <span class="schedule-time">
+                                12h30 – 13h30
+                                <span
+                                    style="display:inline-block; font-size:0.9rem; color:var(--terracotta); margin-left:4px;">✦</span>
+                            </span>
+                            <span class="schedule-type">Hatha Yoga</span>
+                            <a href="profs/danya-hershkowitz.html" class="schedule-teacher">Danya Hershkowitz</a>
+                        </div>
+
+
+4. LIEN DANS LA LISTE DES PROFS (professeurs.html)
+--------------------------------------------------
+                    <a href="profs/danya-hershkowitz.html" class="teacher-card" style="text-decoration:none;">
+                        <div class="teacher-avatar"><img src="img/danya-hershkowitz.jpg" alt="Danya Hershkowitz"></div>
+                        <h3>Danya Hershkowitz</h3>
+                        <p>Hatha Yoga<br>Bruxelles</p>
+                    </a>
+
+
+5. CARTE DE TARIFS (tarifs.html)
+--------------------------------
+                <!-- HATHA — Danya -->
+                <div class="tarif-block">
+                    <div class="tarif-header">
+                        <h3>Hatha Yoga — <a href="profs/danya-hershkowitz.html">Danya Hershkowitz</a></h3>
+                        <p style="font-size:0.85rem; color:var(--mid); margin-top:0.3rem;"><a
+                                href="mailto:hershkowitz.danya@gmail.com">hershkowitz.danya@gmail.com</a> — +32 495 70
+                            89 54</p>
+                    </div>
+                    <div class="tarif-body">
+                        <div class="tarif-row">
+                            <span class="tarif-label">Prix doux</span>
+                            <span class="tarif-price">12 €</span>
+                        </div>
+                        <div class="tarif-row">
+                            <span class="tarif-label">Prix de soutien</span>
+                            <span class="tarif-price">15 €</span>
+                        </div>
+                    </div>
+                    <div style="padding:1rem 1.5rem; background:var(--white);">
+                        <p style="font-size:0.82rem; color:var(--light-text);">Inscription : <a
+                                href="https://app.zenamu.com/yogidany" target="_blank"
+                                rel="noopener">app.zenamu.com/yogidany</a></p>
+                    </div>
+                </div>
