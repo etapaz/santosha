@@ -1091,6 +1091,152 @@ a.card h3 {
     }
 }
 
+/* ---- SUMMER TIMELINE ---- */
+.summer-timeline-wrap {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.summer-timeline {
+    display: flex;
+    align-items: stretch;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+}
+
+.seg-group {
+    position: relative;
+    min-width: 38px;
+    flex-shrink: 0;
+    height: 52px;
+}
+
+.seg-group .seg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 28px;
+    left: 0;
+    right: 0;
+    border-right: 2px solid var(--cream);
+}
+
+.seg-group:last-child .seg {
+    border-right: none;
+}
+
+.seg-group .seg.on {
+    background: var(--sage);
+}
+
+.seg-group .seg.off {
+    background: var(--sand);
+}
+
+.seg-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    color: var(--light-text);
+    line-height: 1.15;
+    pointer-events: none;
+}
+
+.seg-label.top {
+    top: 1px;
+}
+
+.seg-label.bottom {
+    bottom: 1px;
+}
+
+.summer-timeline-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.8rem;
+    font-size: 0.75rem;
+    color: var(--light-text);
+}
+
+.summer-timeline-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.summer-timeline-legend .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.summer-timeline-legend .dot.on {
+    background: var(--sage);
+}
+
+.summer-timeline-legend .dot.off {
+    background: var(--sand);
+}
+
+@media (max-width: 768px) {
+    .summer-timeline {
+        flex-direction: column;
+        overflow: visible;
+        gap: 2px;
+        background: var(--cream);
+    }
+
+    .seg-group {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        min-width: 0;
+        gap: 0.6rem;
+        padding: 0.35rem 0.75rem;
+    }
+
+    .seg-group .seg {
+        position: static;
+        transform: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border-right: none;
+        flex-shrink: 0;
+    }
+
+    .seg-label {
+        position: static;
+        font-size: 0.78rem;
+        text-transform: none;
+        letter-spacing: normal;
+        color: var(--dark);
+    }
+
+    .seg-label.top,
+    .seg-label.bottom {
+        top: auto;
+        bottom: auto;
+    }
+
+    .summer-timeline-legend {
+        padding-left: 0.75rem;
+    }
+}
+
+
+
 /* ---- ALERT BANNER ---- */
 .alert-banner {
     background: var(--terracotta);
