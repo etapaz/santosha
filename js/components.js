@@ -59,7 +59,7 @@ function injectHeader() {
     <div id="promo-banner-summer" class="promo-banner">
       <div class="promo-banner-inner">
         <img src="${prefix}img/salle-jodoigne.jpg" alt="Centre Jodoigne" class="promo-banner-img">
-        <span>Attention horaires d'été : <strong>Jodoigne</strong> — Mercredis de 19h30 – 20h45 du 8 juillet au 26 août inclus. <a href="${prefix}horaires.html#jodoigne">Voir les horaires →</a></span>
+        <span>Consultez les horaires d'été : <strong>Jodoigne</strong> — Mercredis de 19h30 – 20h45 du 8 juillet au 26 août inclus. <a href="${prefix}horaires.html#jodoigne">Voir les horaires →</a></span>
       </div>
     </div>
     <div id="promo-banner" class="promo-banner">
@@ -186,6 +186,17 @@ function initPageTransition() {
     if (!link) return;
     const href = link.getAttribute('href');
     if (!href || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('#')) return;
+
+    // Same page (incl. hash-only links): skip fade — otherwise re-clicking
+    // e.g. horaires.html#jodoigne fades out but never reloads → blank page
+    try {
+      const target = new URL(href, window.location.href);
+      const samePage = target.pathname === window.location.pathname
+        && target.search === window.location.search;
+      if (samePage) return;
+    } catch (_) {
+      return;
+    }
 
     e.preventDefault();
     wrapper.style.opacity = '0';
