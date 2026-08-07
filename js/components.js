@@ -56,9 +56,6 @@ function injectHeader() {
   `).join('');
 
   const headerHTML = `
-    <div class="alert-banner">
-      Pas de cours le <strong>mardi 21 juillet</strong> à Bruxelles.
-    </div>
     <div id="promo-banner-summer" class="promo-banner">
       <div class="promo-banner-inner">
         <img src="${prefix}img/salle-jodoigne.jpg" alt="Centre Jodoigne" class="promo-banner-img">
