@@ -59,7 +59,7 @@ function injectHeader() {
     <div id="promo-banner-summer" class="promo-banner">
       <div class="promo-banner-inner">
         <img src="${prefix}img/salle-jodoigne.jpg" alt="Centre Jodoigne" class="promo-banner-img">
-        <span>Consultez les horaires d'été : <strong>Jodoigne</strong> — Mercredis de 19h30 – 20h45 du 8 juillet au 26 août inclus. <a href="${prefix}horaires.html#jodoigne">Voir les horaires →</a></span>
+        <span><strong>Jodoigne</strong> — Dernier cours d'été le 26 août de 19h30 à 20h45, puis rentrée de Julie le 2 septembre de 19h à 20h15. <a href="${prefix}horaires.html#jodoigne">Voir les horaires →</a></span>
       </div>
     </div>
     <div id="promo-banner" class="promo-banner">
