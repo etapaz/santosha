@@ -56,12 +56,6 @@ function injectHeader() {
   `).join('');
 
   const headerHTML = `
-    <div id="promo-banner-summer" class="promo-banner">
-      <div class="promo-banner-inner">
-        <img src="${prefix}img/salle-jodoigne.jpg" alt="Centre Jodoigne" class="promo-banner-img">
-        <span><strong>Jodoigne</strong> — Dernier cours d'été le 26 août de 19h30 à 20h45, puis rentrée de Julie le 2 septembre de 19h à 20h15. <a href="${prefix}horaires.html#jodoigne">Voir les horaires →</a></span>
-      </div>
-    </div>
     <div id="promo-banner" class="promo-banner">
       <div class="promo-banner-inner">
         <img src="${prefix}img/retraite-italie-villa.avif" alt="Yoga en Italie" class="promo-banner-img">
