@@ -13,13 +13,13 @@
 
     <div class="page-wrapper">
 
-        <div class="page-hero"
-            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/retraite-italie-landscape.png'); background-size: cover; background-position: center;">
+        <div class="page-hero" id="retreat-hero"
+            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/retraite-italie-landscape.png'); background-size: cover; background-position: center; transition: background-image 0.4s ease;">
             <div class="container">
                 <span class="hero-tag" style="color: white; opacity: 0.9;">☽ Ressourcement</span>
                 <h1 style="color: white;">Retraites de yoga</h1>
                 <div class="divider divider-center" style="background: white;"></div>
-                <p style="color: white; opacity: 0.8;">Italie · Corse · 2026</p>
+                <p id="retreat-hero-sub" style="color: white; opacity: 0.8;">Stage en Italie · Septembre 2026</p>
             </div>
         </div>
 
@@ -151,6 +151,24 @@
 
                         <img src="img/corse-marche-thierry.webp" alt="Marche méditative dans le maquis du Cap Corse" style="width: 100%; margin-top: 2.5rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
 
+                        <div style="margin-top: 3rem;">
+                            <h3 style="font-family: var(--font-sans); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.1em; color: var(--terracotta); margin-bottom: 0.5rem;">Le lieu</h3>
+                            <div class="gallery">
+                                <button type="button" class="gallery-item" data-full="img/corse-maison-pierre.webp" aria-label="Agrandir : maison en pierre et lauriers-roses au Cap Corse">
+                                    <img src="img/corse-maison-pierre-thumb.webp" alt="Maison en pierre et lauriers-roses au Cap Corse" width="600" height="450" loading="lazy" decoding="async">
+                                </button>
+                                <button type="button" class="gallery-item" data-full="img/corse-vue-mer.webp" aria-label="Agrandir : vue sur la mer depuis les hauteurs du Cap Corse">
+                                    <img src="img/corse-vue-mer-thumb.webp" alt="Vue sur la mer et la baie depuis les hauteurs du Cap Corse" width="600" height="450" loading="lazy" decoding="async">
+                                </button>
+                                <button type="button" class="gallery-item" data-full="img/corse-terrasse.webp" aria-label="Agrandir : terrasse et façade de la maison à Sisco">
+                                    <img src="img/corse-terrasse-thumb.webp" alt="Terrasse et façade de la maison de Sisco" width="600" height="450" loading="lazy" decoding="async">
+                                </button>
+                                <button type="button" class="gallery-item" data-full="img/corse-chambre.webp" aria-label="Agrandir : chambre avec vue sur le maquis à Sisco">
+                                    <img src="img/corse-chambre-thumb.webp" alt="Chambre avec vue sur le maquis à Sisco" width="450" height="600" loading="lazy" decoding="async">
+                                </button>
+                            </div>
+                        </div>
+
                         <div style="margin-top: 3rem; text-align: left;">
                             <h3 style="font-family: var(--font-sans); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.1em; color: var(--terracotta); margin-bottom: 1.5rem; text-align: center;">Journée type</h3>
                             <ul style="list-style: none; padding-left: 0; font-size: 0.95rem; max-width: 420px; margin: 0 auto;">
@@ -172,7 +190,7 @@
                             <div class="divider divider-center"></div>
                             <p style="font-size: 1.25rem; color: var(--terracotta); font-weight: 500; margin-bottom: 0.5rem;">650 €</p>
                             <p style="font-size: 0.85rem; line-height: 1.5; color: var(--light-text); max-width: 520px; margin: 0 auto;">Ce prix comprend l'hébergement, les cours de yoga et la nourriture.</p>
-                            <p style="font-size: 0.82rem; font-style: italic; color: var(--light-text); margin-top: 0.5rem;">Hors transport.</p>
+                            <p style="font-size: 0.82rem; font-style: italic; color: var(--light-text); margin-top: 0.5rem;">Hors transport et excursion éventuelle.</p>
                         </div>
 
                         <div style="margin-top: 2.5rem; border-top: 1px solid var(--sand); padding-top: 2rem;">
@@ -191,8 +209,39 @@
 
     </div><!-- .page-wrapper -->
 
+    <!-- Lightbox galerie -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galerie photos" aria-hidden="true">
+        <button type="button" class="lightbox-close" aria-label="Fermer">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev" aria-label="Photo précédente">&#8249;</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="">
+        <button type="button" class="lightbox-nav lightbox-next" aria-label="Photo suivante">&#8250;</button>
+    </div>
+
     <script src="js/components.js"></script>
     <script>
+        // Bannière dédiée par onglet
+        const HEROES = {
+            italie: {
+                img: "img/retraite-italie-landscape.png",
+                sub: "Stage en Italie · Septembre 2026"
+            },
+            corse: {
+                img: "img/corse-marche-thierry.webp",
+                sub: "Retraite en Corse · Octobre 2026"
+            }
+        };
+
+        const hero = document.getElementById('retreat-hero');
+        const heroSub = document.getElementById('retreat-hero-sub');
+
+        function setHero(tabName) {
+            const data = HEROES[tabName];
+            if (!data || !hero) return;
+            hero.style.backgroundImage =
+                `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${data.img}')`;
+            if (heroSub) heroSub.textContent = data.sub;
+        }
+
         function activateTab(tabName) {
             const btn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
             const content = document.getElementById('tab-' + tabName);
@@ -202,6 +251,7 @@
             document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
             btn.classList.add('active');
             content.classList.add('active');
+            setHero(tabName);
         }
 
         function activateTabFromHash() {
@@ -222,6 +272,66 @@
 
         window.addEventListener('hashchange', activateTabFromHash);
         activateTabFromHash();
+
+        // Précharge les images de bannière pour un changement instantané
+        Object.values(HEROES).forEach(({ img }) => { new Image().src = img; });
+
+        // ---- Lightbox galerie ----
+        (function initLightbox() {
+            const items = Array.from(document.querySelectorAll('.gallery-item'));
+            const box = document.getElementById('lightbox');
+            if (!items.length || !box) return;
+
+            const imgEl = document.getElementById('lightbox-img');
+            const btnClose = box.querySelector('.lightbox-close');
+            const btnPrev = box.querySelector('.lightbox-prev');
+            const btnNext = box.querySelector('.lightbox-next');
+            let index = 0;
+            let lastFocus = null;
+
+            function show(i) {
+                index = (i + items.length) % items.length;
+                const item = items[index];
+                const thumb = item.querySelector('img');
+                imgEl.src = item.dataset.full;
+                imgEl.alt = thumb ? thumb.alt : '';
+            }
+
+            function open(i) {
+                lastFocus = document.activeElement;
+                show(i);
+                box.classList.add('open');
+                box.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('lightbox-open');
+                btnClose.focus();
+            }
+
+            function close() {
+                box.classList.remove('open');
+                box.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('lightbox-open');
+                if (lastFocus) lastFocus.focus();
+            }
+
+            items.forEach((item, i) => {
+                item.addEventListener('click', () => open(i));
+            });
+
+            btnClose.addEventListener('click', close);
+            btnPrev.addEventListener('click', () => show(index - 1));
+            btnNext.addEventListener('click', () => show(index + 1));
+
+            box.addEventListener('click', (e) => {
+                if (e.target === box) close();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!box.classList.contains('open')) return;
+                if (e.key === 'Escape') close();
+                else if (e.key === 'ArrowLeft') show(index - 1);
+                else if (e.key === 'ArrowRight') show(index + 1);
+            });
+        })();
     </script>
 </body>
 
