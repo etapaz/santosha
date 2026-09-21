@@ -59,12 +59,10 @@ function injectHeader() {
     <div id="promo-banner" class="promo-banner">
       <div class="promo-banner-inner">
         <div class="promo-banner-imgs">
-          <img src="${prefix}img/retraite-italie-villa.avif" alt="Yoga en Ombrie" class="promo-banner-img">
           <img src="${prefix}img/corse-marche-thierry.webp" alt="Retraite en Corse" class="promo-banner-img">
         </div>
         <div class="promo-banner-text">
-          <span>Prochaine retraite : <strong>Yoga en Ombrie (Italie)</strong> — Du 19 au 25 septembre 2026. <a href="${prefix}retraites.html#italie">Découvrir le programme →</a></span>
-          <span>Également : <strong>Retraite en Corse</strong> — Du 12 au 17 octobre 2026. <a href="${prefix}retraites.html#corse">Découvrir le programme →</a></span>
+          <span>Prochaine retraite : <strong>Retraite en Corse</strong> — Du 12 au 17 octobre 2026. <a href="${prefix}retraites.html#corse">Découvrir le programme →</a></span>
         </div>
       </div>
     </div>
