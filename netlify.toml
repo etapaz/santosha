@@ -1,0 +1,3 @@
+# Netlify builds disabled: site migrated off Netlify.
+[build]
+  ignore = "exit 0"
