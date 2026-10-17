@@ -56,16 +56,6 @@ function injectHeader() {
   `).join('');
 
   const headerHTML = `
-    <div id="promo-banner" class="promo-banner">
-      <div class="promo-banner-inner">
-        <div class="promo-banner-imgs">
-          <img src="${prefix}img/corse-marche-thierry.webp" alt="Retraite en Corse" class="promo-banner-img">
-        </div>
-        <div class="promo-banner-text">
-          <span>Prochaine retraite : <strong>Retraite en Corse</strong> — Du 12 au 17 octobre 2026. <a href="${prefix}retraites.html#corse">Découvrir le programme →</a></span>
-        </div>
-      </div>
-    </div>
     <header id="site-header">
       <div class="header-inner">
         <a href="${prefix}index.html" class="logo">
