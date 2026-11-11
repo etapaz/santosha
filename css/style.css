@@ -1548,3 +1548,26 @@ body.lightbox-open { overflow: hidden; }
         transform: translateY(-50%);
     }
 }
+
+/* Cartes Hendrike (Bain sonore, Cercle Mantra) : titre et date en couleur/typo des autres ateliers, liens conservés */
+.card-linked h3 a,
+.card-linked p strong a {
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+}
+
+.card-linked h3 a:hover,
+.card-linked h3 a:focus-visible,
+.card-linked p strong a:hover,
+.card-linked p strong a:focus-visible {
+    color: var(--terracotta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.card-linked p strong a:focus-visible,
+.card-linked h3 a:focus-visible {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 2px;
+}
